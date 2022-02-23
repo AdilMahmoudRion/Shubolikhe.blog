@@ -1,9 +1,10 @@
+import Home from "./Components/Home/Home";
 import Navigation from "./Components/Shared/Navigation/Navigation";
 
 function App() {
   return (
     <>
-      <Navigation></Navigation>
+      <Home></Home>
     </>
   );
 }

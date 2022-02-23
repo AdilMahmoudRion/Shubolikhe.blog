@@ -1,10 +1,13 @@
 import React from "react";
+import Footer from "../Shared/Footer/Footer";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const Home = () => {
   return (
-    <div>
-      <h2>home</h2>
-    </div>
+    <>
+      <Navigation></Navigation>
+      <Footer></Footer>
+    </>
   );
 };
 
