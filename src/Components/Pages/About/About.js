@@ -12,8 +12,7 @@ import pinterest from "../../Shared/Images/social/pinterest.png";
 const About = () => {
   return (
     <>
-      <Navigation></Navigation>
-      <section className="about-section py-4 lg:px-52 bg-white sm:px-8">
+      <section className="about-section py-4 lg:px-52 bg-white px-5">
         <div className="md:grid lg:grid-cols-3 md:gap-4">
           <div className="author-image col-span-2">
             <img src={author} alt="" />
@@ -53,7 +52,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="author-introduction lg:px-56 mt-10">
+        <div className="author-introduction lg:px-48 mt-10">
           <p className="py-4">
             Sorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
             cupiditate unde consequuntur aperiam earum, . Magni facere
@@ -76,7 +75,6 @@ const About = () => {
           </p>
         </div>
       </section>
-      <Footer></Footer>
     </>
   );
 };
