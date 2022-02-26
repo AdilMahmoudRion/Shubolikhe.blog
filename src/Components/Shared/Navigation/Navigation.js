@@ -34,7 +34,7 @@ const Navigation = () => {
                   </Disclosure.Button>
                 </div>
                 <div className="mx-auto">
-                  <h1 className="text-5xl pb-5 text-center font-semibold text-[#b70038] tracking-wide">
+                  <h1 className="text-5xl md:pb-5 py-3 text-center font-light text-[#b70038] tracking-wide">
                     Shubolikhe
                   </h1>
                   <div className="hidden sm:block sm:ml-6 md:ml-0">

@@ -16,7 +16,7 @@ const Footer = () => {
               target="_blank"
               class="flex items-center text-4xl font-extrabold"
             >
-              <h1 className="text-4xl font-bold pb-5 text-center font-semibold text-[#b70038] tracking-wide">
+              <h1 className="text-4xl font-light pb-5 text-center font-semibold text-[#b70038] tracking-wide">
                 Shubolikhe.Blog
               </h1>
             </a>
