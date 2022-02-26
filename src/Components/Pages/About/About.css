@@ -1,12 +1,17 @@
-.author-image {
-  width: 100%;
-  height: 500px;
+@media (min-width: 768px) {
+  .author-image {
+    width: 100%;
+    height: 500px;
+  }
 }
 .author-image > img {
   width: 100%;
   height: 100%;
 }
 .author-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #f4f6f8;
   padding: 15px;
 }
@@ -31,4 +36,24 @@
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+}
+.author-introduction > p:first-child::first-letter {
+  float: left;
+  height: 42px;
+  margin-top: 12px;
+  margin-right: 8px;
+  color: #b70038;
+  font-size: 62px;
+  line-height: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+figcaption {
+  width: 100%;
+  text-align: center;
+  color: #5d738d;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 8px 16px 0 16px;
 }

@@ -54,11 +54,11 @@ const blog = [
 const Blog = () => {
   return (
     <>
-      <div className="py-4 px-5 md:px-52 bg-white sm:px-1">
+      <div className="py-4 px-5 lg:px-52 bg-white">
         <div class="grid md:grid-cols-3 sm:grid-cols-1  md:gap-10">
           <div class="blog-post-card sm:col-span-1 md:col-span-2">
             <div className="blog-post-image">
-              <img class="" src={img1} alt="post 1" />
+              <img src={img1} alt="post 1" />
             </div>
             <div className="blog-post-title-section">
               <div className="blog-post-title">
@@ -93,7 +93,7 @@ const Blog = () => {
           </div>
           <div class="blog-post-card col-span-1">
             <div className="blog-post-image">
-              <img class="h-36" src={img2} alt="post 1" />
+              <img src={img2} alt="post 1" />
             </div>
             <div className="blog-post-title-section">
               <div className="blog-post-title">
@@ -128,9 +128,9 @@ const Blog = () => {
           </div>
 
           {blog.map((blog) => (
-            <div class="blog-post-card col-span-1">
-              <div className="blog-post-image">
-                <img class="h-36" src={blog.img} alt="post 1" />
+            <div class="blog-post-card-section col-span-1">
+              <div className="blog-post-image-section">
+                <img class="" src={blog.img} alt="post 1" />
               </div>
               <div className="blog-post-title-section">
                 <div className="blog-post-title">
@@ -162,6 +162,15 @@ const Blog = () => {
               <a href="#" className="card-header">
                 {blog.title}
               </a>
+              <div>
+                <time
+                  class="blog-published-time"
+                  datetime="2017-03-27"
+                  title="27 March 2017"
+                >
+                  27.Mar.2017
+                </time>
+              </div>
             </div>
           ))}
         </div>

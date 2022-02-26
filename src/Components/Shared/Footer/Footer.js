@@ -8,9 +8,9 @@ import pinterest from "../../Shared/Images/social/pinterest.png";
 const Footer = () => {
   return (
     <>
-      <footer class="block py-16 px-5  md:px-52 bg-[#f4f6f8] sm:px-10 ">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="col-span-1 mb-6 md:mb-0">
+      <footer class="py-16 px-5  lg:px-52 bg-[#f4f6f8] sm:px-10 ">
+        <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+          <div class="col-span-1 md:col-span-2 lg:col-span-1 mb-6 md:mb-0">
             <a
               href="https://flowbite.com"
               target="_blank"
@@ -21,8 +21,8 @@ const Footer = () => {
               </h1>
             </a>
           </div>
-          <div className="col-span-2">
-            <div class="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="md:col-span-2 lg:col-span-2">
+            <div class="grid md:grid-cols-3 grid-cols-2 md:gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                 <h3 class="mb-6 text-sm font-semibold text-[#222222] uppercase">
                   Tag
@@ -78,7 +78,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div>
+              <div class="col-span-2 md:col-span-1 py-5 md:py-0">
                 <label
                   for="email-adress-icon"
                   class="mb-6 text-sm font-semibold text-[#222222] uppercase "
@@ -115,7 +115,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr class="my-6  sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr class="my-6  border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-gray-500 sm:text-center ">
             © 2022{" "}
