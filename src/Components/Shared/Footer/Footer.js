@@ -1,157 +1,127 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <footer class="block py-4 px-5 md:px-52 bg-white sm:px-10  dark:bg-gray-800">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 pr-52 md:mb-0">
+      <footer class="block py-16 px-5  md:px-52 bg-[#f4f6f8] sm:px-10 ">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="col-span-1 mb-6 md:mb-0">
             <a
               href="https://flowbite.com"
               target="_blank"
-              class="flex items-center"
+              class="flex items-center text-4xl font-extrabold"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Blogger_logo.svg/1200px-Blogger_logo.svg.png"
-                class="mr-4 h-10"
-                alt="FlowBite Logo"
-              />
-              {/*  <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                Flowbite
-              </span> */}
+              <h1 className="text-5xl font-bold pb-5 text-center font-semibold text-[#b70038] tracking-wide">
+                Shubolikhe.Blog
+              </h1>
             </a>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
-            <div>
-              <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Resources
-              </h3>
-              <ul>
-                <li class="mb-4">
-                  <a
-                    href="https://flowbite.com"
-                    target="_blank"
-                    class="text-gray-600 hover:underline dark:text-gray-400"
-                  >
-                    Flowbite
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    target="_blank"
-                    rel="nofollow"
-                    class="text-gray-600 hover:underline dark:text-gray-400"
-                  >
-                    Tailwind CSS
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
-              </h3>
-              <ul>
-                <li class="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    target="_blank"
-                    class="text-gray-600 hover:underline dark:text-gray-400"
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    target="_blank"
-                    class="text-gray-600 hover:underline dark:text-gray-400"
-                  >
-                    Discord
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Legal
-              </h3>
-              <ul>
-                <li class="mb-4">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="text-gray-600 hover:underline dark:text-gray-400"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="text-gray-600 hover:underline dark:text-gray-400"
-                  >
-                    Terms &amp; Conditions
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <label
-                for="email-adress-icon"
-                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-              >
-                Get more updates...
-              </label>
-
-              <div class="relative mt-1">
-                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                  <svg
-                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                  </svg>
-                </div>
-                <input
-                  type="text"
-                  id="email-adress-icon"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-8 p-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="name@nabia.com"
-                />
+          <div className="col-span-2">
+            <div class="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                <h3 class="mb-6 text-sm font-semibold text-[#222222] uppercase">
+                  Tag
+                </h3>
+                <ul>
+                  <li class="mb-2">
+                    <Link to="/" class="hover:text-[#b70038] text-[#222222]">
+                      Education
+                    </Link>
+                  </li>
+                  <li class="mb-2">
+                    <Link to="/" class=" hover:text-[#b70038] text-[#222222]">
+                      Lifestyle
+                    </Link>
+                  </li>
+                  <li class="mb-2">
+                    <Link to="/" class=" hover:text-[#b70038] text-[#222222]">
+                      Nature
+                    </Link>
+                  </li>
+                  <li class="mb-2">
+                    <Link to="/" class=" hover:text-[#b70038] text-[#222222]">
+                      Travel
+                    </Link>
+                  </li>
+                </ul>
               </div>
-              <button
-                type="button"
-                class="text-white rounded-lg text-sm w-full mt-3 py-2 text-center mr-2 mb-2 bg-[#b70038] "
-              >
-                SUBSCRIBE
-              </button>
+              <div>
+                <h3 class="mb-6 text-sm font-semibold text-[#222222] uppercase ">
+                  Navigation
+                </h3>
+                <ul>
+                  <li class="mb-2">
+                    <Link to="/" class="hover:text-[#b70038] text-[#222222]">
+                      About
+                    </Link>
+                  </li>
+                  <li class="mb-2">
+                    <Link to="/" class=" hover:text-[#b70038] text-[#222222]">
+                      Tags
+                    </Link>
+                  </li>
+                  <li class="mb-2">
+                    <Link to="/" class=" hover:text-[#b70038] text-[#222222]">
+                      Nature
+                    </Link>
+                  </li>
+                  <li class="mb-2">
+                    <Link to="/" class=" hover:text-[#b70038] text-[#222222]">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <label
+                  for="email-adress-icon"
+                  class="mb-6 text-sm font-semibold text-[#222222] uppercase "
+                >
+                  Get more updates...
+                </label>
+
+                <div class="relative mt-1">
+                  <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="email-adress-icon"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-8 p-2  border-[#b70038] placeholder-gray-400  "
+                    placeholder="shubolikhe@blog.com"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="text-white rounded-lg text-sm w-full mt-3 py-2 text-center mr-2 mb-2 bg-[#b70038] "
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr class="my-6  sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span class="text-sm text-gray-500 sm:text-center ">
             © 2022{" "}
-            <a
-              href="https://flowbite.com"
-              target="_blank"
-              class="hover:underline"
-            >
-              Nabia
-            </a>
+            <Link to="home" class="hover:text-[#b70038]">
+              Shubolikhe.blog
+            </Link>
             . All Rights Reserved.
           </span>
           <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <a href="#" class="text-gray-500 hover:text-[#b70038]">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -165,10 +135,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <a href="#" class="text-gray-500 hover:text-[#b70038] ">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -182,10 +149,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <a href="#" class="text-gray-500 hover:text-[#b70038]">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -195,10 +159,7 @@ const Footer = () => {
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
               </svg>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <a href="#" class="text-gray-500 hover:text-[#b70038]">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"
@@ -212,10 +173,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <a href="#" class="text-gray-500 hover:text-[#b70038]">
               <svg
                 class="w-5 h-5"
                 fill="currentColor"

@@ -1,4 +1,5 @@
 import React from "react";
+import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";

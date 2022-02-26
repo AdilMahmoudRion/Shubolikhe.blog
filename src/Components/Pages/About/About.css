@@ -1,0 +1,11 @@
+.author-image {
+  width: 100%;
+  height: 530px;
+}
+.author-image > img {
+  width: 100%;
+  height: 100%;
+}
+.author-information {
+  background-color: coral;
+}
