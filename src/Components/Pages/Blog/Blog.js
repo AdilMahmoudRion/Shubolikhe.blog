@@ -62,34 +62,34 @@ const Blog = () => {
             </div>
             <div className="blog-post-title-section">
               <div className="blog-post-title">
-                <a href="#" className="">
+                <Link to="#" className="">
                   travel
-                </a>
+                </Link>
               </div>
 
               <div className="blog-post-title-social-link">
-                <a href="#">
+                <Link to="#">
                   <img className="social-icon" src={twitter} alt="" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <img className="social-icon" src={facebook} alt="" />
-                </a>
-                <a href="">
+                </Link>
+                <Link to="#">
                   <img
                     className="social-icon"
                     src={linkedin}
                     alt=""
                     srcset=""
                   />
-                </a>
-                <a href="">
+                </Link>
+                <Link to="">
                   <img className="social-icon" src={pinterest} alt="" />
-                </a>
+                </Link>
               </div>
             </div>
-            <a href="#" className="card-header">
+            <Link to="/read-blog" className="card-header">
               Setting up your own Ghost
-            </a>
+            </Link>
           </div>
           <div class="blog-post-card col-span-1">
             <div className="blog-post-image">
@@ -134,34 +134,34 @@ const Blog = () => {
               </div>
               <div className="blog-post-title-section">
                 <div className="blog-post-title">
-                  <a href="#" className="">
+                  <Link to="#" className="">
                     travel
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="blog-post-title-social-link">
-                  <a href="#">
+                  <Link to="#">
                     <img className="social-icon" src={twitter} alt="" />
-                  </a>
-                  <a href="#">
+                  </Link>
+                  <Link to="#">
                     <img className="social-icon" src={facebook} alt="" />
-                  </a>
-                  <a href="">
+                  </Link>
+                  <Link to="#">
                     <img
                       className="social-icon"
                       src={linkedin}
                       alt=""
                       srcset=""
                     />
-                  </a>
-                  <a href="">
+                  </Link>
+                  <Link to="#">
                     <img className="social-icon" src={pinterest} alt="" />
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <a href="#" className="card-header">
+              <Link to="#" className="card-header">
                 {blog.title}
-              </a>
+              </Link>
               <div>
                 <time
                   class="blog-published-time"

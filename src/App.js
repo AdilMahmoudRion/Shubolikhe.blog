@@ -5,6 +5,7 @@ import About from "./Components/Pages/About/About";
 import AboutMe from "./Components/Pages/About/AboutMe";
 import Tags from "./Components/Pages/Tags/Tags";
 import Contact from "./Components/Pages/Contact/Contact";
+import BlogRead from "./Components/Pages/BlogRead/BlogRead";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="about" element={<AboutMe />} />
           <Route path="blog" element={<Tags />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="read-blog" element={<BlogRead />} />
         </Routes>
       </BrowserRouter>
     </>
