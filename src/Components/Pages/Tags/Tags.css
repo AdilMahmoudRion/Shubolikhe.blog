@@ -1,0 +1,52 @@
+.tags-card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: #f4f6f8;
+}
+.tags-card:after {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-bottom: 75%;
+}
+.tags-card:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #000),
+    color-stop(50%, transparent)
+  );
+  background: linear-gradient(0deg, #000 0, transparent 50%);
+}
+.u-font-size-tiny {
+  font-size: 12px;
+  line-height: 19px;
+}
+.tags-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tags-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+}

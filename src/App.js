@@ -3,6 +3,7 @@ import Navigation from "./Components/Shared/Navigation/Navigation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./Components/Pages/About/About";
 import AboutMe from "./Components/Pages/About/AboutMe";
+import Tags from "./Components/Pages/Tags/Tags";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<AboutMe />} />
+          <Route path="blog" element={<Tags />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -8,7 +8,7 @@ import pinterest from "../../Shared/Images/social/pinterest.png";
 const Footer = () => {
   return (
     <>
-      <footer class="py-16 px-5  lg:px-52 bg-[#f4f6f8] sm:px-10 ">
+      <footer class="py-16 px-5  lg:px-52 bg-[#f4f6f8] sm:px-10 mt-10">
         <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
           <div class="col-span-1 md:col-span-2 lg:col-span-1 mb-6 md:mb-0">
             <a
