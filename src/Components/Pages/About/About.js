@@ -18,7 +18,7 @@ const About = () => {
             <img src={author} alt="" />
           </div>
           <div className="author-information col-span-1 text-center">
-            <h1 className="text-5xl font-bold pb-5">About Me</h1>
+            <h1 className="text-5xl font-bold pb-5 text-[#222222]">About Me</h1>
 
             <p className="about-me">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
