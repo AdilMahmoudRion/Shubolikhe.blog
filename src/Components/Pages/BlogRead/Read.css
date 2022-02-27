@@ -69,6 +69,7 @@
   color: #b70038;
 }
 .c-widget__title {
+  text-align: left;
   padding-left: 8px;
   margin-bottom: 24px;
   line-height: 1;
@@ -126,4 +127,128 @@
   font-style: italic;
   font-family: "Playfair Display", serif;
   color: #b70038;
+}
+
+/* tag */
+.c-tags {
+  overflow: hidden;
+}
+.c-tags-link {
+  float: left;
+  padding: 8px 20px;
+  margin: 0 8px 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
+  line-height: 22px;
+  color: #5d738d;
+  background-color: #f4f6f8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* email twitter */
+.o-grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-right: -16px;
+  margin-left: -16px;
+  padding: 0;
+}
+.o-grid::before {
+  display: table;
+  content: "";
+}
+
+@media (min-width: 64em) {
+  .o-grid__col--2-4-l {
+    width: 50%;
+  }
+}
+@media (min-width: 40em) {
+  .o-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+  }
+  .o-grid__col--4-4-m {
+    width: 100%;
+  }
+  .o-grid__col--4-4-s {
+    width: 100%;
+  }
+  .o-grid__col {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+.o-grid__col {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.c-share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.o-plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.c-share__item:not(:last-child) {
+  border-right: 4px solid #fff;
+}
+.c-share__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+.c-share__link--twitter {
+  background-color: #1da1f2;
+}
+.c-share__link {
+  display: block;
+  padding: 5.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.c-share__link--clipboard {
+  background-color: #44bd32;
+}
+.c-share__link--email {
+  background-color: #000;
+}
+.c-share__link--pinterest {
+  background-color: #bd081c;
+}
+.c-share__link--linkedin {
+  background-color: #0077b5;
+}
+.c-share__link--facebook {
+  background-color: #3b5998;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  fill: currentColor;
+}
+.c-share__icon {
+  vertical-align: middle;
+  fill: #fff;
+}
+.c-share__icon {
+  vertical-align: middle;
+  fill: #fff;
 }
