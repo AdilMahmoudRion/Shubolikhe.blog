@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Blog.css";
 import img1 from "../../Shared/Images/posts/20.jpg";
 import img2 from "../../Shared/Images/posts/11.jpg";
@@ -52,6 +52,16 @@ const blog = [
 ];
 
 const Blog = () => {
+  const [blog, setBlog] = useState([]);
+  console.log(blog);
+  useEffect(() => {
+    fetch("http://localhost:5000/blog")
+      .then((res) => res.json())
+      .then((data) => {
+        // setIsLoading(false);
+        setBlog(data);
+      });
+  }, []);
   return (
     <>
       <div className="py-4 px-5 lg:px-52 bg-white">
@@ -128,14 +138,17 @@ const Blog = () => {
           </div>
 
           {blog.map((blog) => (
-            <div class="blog-post-card-section col-span-1">
+            <Link
+              to={`/read-blog/${blog._id}`}
+              class="blog-post-card-section col-span-1"
+            >
               <div className="blog-post-image-section">
-                <img class="" src={blog.img} alt="post 1" />
+                <img class="" src={blog?.img} alt="post 1" />
               </div>
               <div className="blog-post-title-section">
                 <div className="blog-post-title">
                   <Link to="#" className="">
-                    travel
+                    {blog?.category}
                   </Link>
                 </div>
 
@@ -143,7 +156,7 @@ const Blog = () => {
                   <Link to="#">
                     <img className="social-icon" src={twitter} alt="" />
                   </Link>
-                  <Link to="#">
+                  <Link to="facebook">
                     <img className="social-icon" src={facebook} alt="" />
                   </Link>
                   <Link to="#">
@@ -159,8 +172,8 @@ const Blog = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="#" className="card-header">
-                {blog.title}
+              <Link to={`/read-blog/${blog._id}`} className="card-header">
+                {blog?.title}
               </Link>
               <div>
                 <time
@@ -168,10 +181,10 @@ const Blog = () => {
                   datetime="2017-03-27"
                   title="27 March 2017"
                 >
-                  27.Mar.2017
+                  {blog?.date}
                 </time>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
