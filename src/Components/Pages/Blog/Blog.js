@@ -173,7 +173,7 @@ const Blog = () => {
                 </div>
               </div>
               <Link to={`/read-blog/${blog._id}`} className="card-header">
-                {blog?.title}
+                {`${blog?.title?.slice(0, 28).concat("..")}`}
               </Link>
               <div>
                 <time
