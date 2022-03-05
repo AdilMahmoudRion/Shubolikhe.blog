@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Server from "../../Hooks/Server";
 import author2 from "../../Shared/Images/author-img2.jpg";
 import authorImg from "../../Shared/Images/authorimg.jpeg";
 import linkedin from "../../Shared/Images/social/linkedin.png";
@@ -12,36 +13,20 @@ import "./Read.css";
 
 const Read = () => {
   const { id } = useParams();
+  const { blog, readBlog, HandleReadBlog } = Server();
+  HandleReadBlog(id);
 
-  const [blog, setBlog] = useState([]);
-  const [latestBlog, setLatestBlog] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:5000/read-blog/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        // setIsLoading(false);
-        setBlog(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/blog")
-      .then((res) => res.json())
-      .then((data) => {
-        // setIsLoading(false);
-        setLatestBlog(data);
-      });
-  }, []);
+  console.log(readBlog);
 
   return (
     <article className="py-4 px-5 lg:px-52 bg-white">
       <div className="md:grid lg:grid-cols-3 widget">
         <div className="author-image col-span-2">
-          <img src={blog?.img} alt="images" />
+          <img src={readBlog?.img} alt="images" />
         </div>
         <div className="c-post-hero__content col-span-1 ">
-          <h1 className="c-post-hero__title">{blog?.title}</h1>
-          <div className="c-post-hero__meta">{blog?.date}</div>
+          <h1 className="c-post-hero__title">{readBlog?.title}</h1>
+          <div className="c-post-hero__meta">{readBlog?.date}</div>
         </div>
       </div>
       <div>
@@ -49,7 +34,7 @@ const Read = () => {
           <div className="author-introduction col-span-1 md:col-span-2 lg:col-span-2 lg:pr-10  pt-8">
             <div
               className="post__description"
-              dangerouslySetInnerHTML={{ __html: blog?.blog }}
+              dangerouslySetInnerHTML={{ __html: readBlog?.blog }}
             />
             <div className="o-grid">
               <div className="o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--2-4-l">
@@ -172,9 +157,12 @@ const Read = () => {
             <div className="c-widget">
               <h3 className="c-widget__title text-left">Recent Posts</h3>
               <>
-                {latestBlog.map((blog) => (
+                {blog.slice(0, 5).map((blog) => (
                   <div className="c-teaser">
-                    <div className="c-teaser__content text-left">
+                    <Link
+                      to={`/read-blog/${blog._id}`}
+                      className="c-teaser__content text-left"
+                    >
                       <h3 className="c-teaser__title">{blog?.title}</h3>
                       <time
                         className="c-teaser__date"
@@ -183,7 +171,7 @@ const Read = () => {
                       >
                         {`${blog.date?.slice(0, 12).concat("")}`}
                       </time>
-                    </div>
+                    </Link>
                     <div className="c-teaser__media">
                       <img
                         className="c-teaser__image ls-is-cached lazyloaded"

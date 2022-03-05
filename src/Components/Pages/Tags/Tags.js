@@ -9,48 +9,42 @@ import blog5 from "../../Shared/Images/posts/5.jpg";
 import Navigation from "../../Shared/Navigation/Navigation";
 import "./Tags.css";
 
-const blog = [
+const tag = [
   {
     id: "1",
-    title: "inimalism is something.",
-    summary: `The important thing is that there is a wide range of people who might have some disabilities and by ignoring them you will make their life harder and they will end up leaving, but the web should be available to everyone.
-    The problem comes with no awareness about it, no budget, or not learning about it at the start of learning about web development as a single topic, somehow we ignore it and jump directly into writing HTML without thinking about this wide range of people who might use the end product.`,
+    title: "Education",
     img: `${blog1}`,
+    url: `/tag-blog/`,
   },
   {
     id: "2",
-    title: "inimalism is something.",
-    summary: `The important thing is that there is a wide range of people who might have some disabilities and by ignoring them you will make their life harder and they will end up leaving, but the web should be available to everyone.
-  The problem comes with no awareness about it, no budget, or not learning about it at the start of learning about web development as a single topic, somehow we ignore it and jump directly into writing HTML without thinking about this wide range of people who might use the end product.`,
+    title: "Lifestyle",
     img: `${blog2}`,
+    url: `/tag-blog/`,
   },
   {
     id: "3",
-    title: "inimalism is something.",
-    summary: `The important thing is that there is a wide range of people who might have some disabilities and by ignoring them you will make their life harder and they will end up leaving, but the web should be available to everyone.
-  The problem comes with no awareness about it, no budget, or not learning about it at the start of learning about web development as a single topic, somehow we ignore it and jump directly into writing HTML without thinking about this wide range of people who might use the end product.`,
+    title: "Nature",
     img: `${blog3}`,
+    url: `/tag-blog/`,
   },
   {
     id: "4",
-    title: "inimalism is something.",
-    summary: `The important thing is that there is a wide range of people who might have some disabilities and by ignoring them you will make their life harder and they will end up leaving, but the web should be available to everyone.
-  The problem comes with no awareness about it, no budget, or not learning about it at the start of learning about web development as a single topic, somehow we ignore it and jump directly into writing HTML without thinking about this wide range of people who might use the end product.`,
+    title: "Travel",
     img: `${blog4}`,
+    url: `/tag-blog/`,
   },
   {
     id: "5",
-    title: "inimalism is something.",
-    summary: `The important thing is that there is a wide range of people who might have some disabilities and by ignoring them you will make their life harder and they will end up leaving, but the web should be available to everyone.
-  The problem comes with no awareness about it, no budget, or not learning about it at the start of learning about web development as a single topic, somehow we ignore it and jump directly into writing HTML without thinking about this wide range of people who might use the end product.`,
+    title: "Something",
     img: `${blog5}`,
+    url: `/tag-blog/`,
   },
   {
     id: "6",
-    title: "inimalism is something.",
-    summary: `The important thing is that there is a wide range of people who might have some disabilities and by ignoring them you will make their life harder and they will end up leaving, but the web should be available to everyone.
-  The problem comes with no awareness about it, no budget, or not learning about it at the start of learning about web development as a single topic, somehow we ignore it and jump directly into writing HTML without thinking about this wide range of people who might use the end product.`,
+    title: "Novel",
     img: `${blog5}`,
+    url: `/tag-blog/`,
   },
 ];
 
@@ -63,11 +57,14 @@ const Tags = () => {
           <h1 className="text-2xl">Tags</h1>
         </div>
         <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap">
-          {blog.map((blog) => (
-            <Link to="#" className="tags-card col-span-1">
-              <img className="tags-image" src={blog.img} alt="post 1" />
+          {tag.map((tag) => (
+            <Link
+              to={tag.url.concat(tag.title)}
+              className="tags-card col-span-1"
+            >
+              <img className="tags-image" src={tag.img} alt="post 1" />
               <h2 className="tags-title">
-                Title <span className="u-font-size-tiny">(24)</span>
+                {tag.title} <span className="u-font-size-tiny">(24)</span>
               </h2>
             </Link>
           ))}

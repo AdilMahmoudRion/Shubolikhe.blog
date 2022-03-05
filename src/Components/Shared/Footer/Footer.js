@@ -30,7 +30,7 @@ const Footer = () => {
                 <ul>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/tag-blog/Education"
                       className="hover:text-[#b70038] text-[#222222]"
                     >
                       Education
@@ -38,7 +38,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/tag-blog/Lifestyle"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
                       Lifestyle
@@ -46,7 +46,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/tag-blog/Nature"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
                       Nature
@@ -54,7 +54,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/tag-blog/Travel"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
                       Travel
@@ -69,7 +69,7 @@ const Footer = () => {
                 <ul>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/about"
                       className="hover:text-[#b70038] text-[#222222]"
                     >
                       About
@@ -77,7 +77,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/blog"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
                       Tags
@@ -85,15 +85,15 @@ const Footer = () => {
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/tag-blog/Novel"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
-                      Nature
+                      Novel
                     </Link>
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/"
+                      to="/contact"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
                       Contact

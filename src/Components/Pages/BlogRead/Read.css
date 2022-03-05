@@ -1,7 +1,8 @@
 @import url("https://fonts.maateen.me/solaiman-lipi/font.css");
 
 .c-post-hero__title,
-.post__description {
+.post__description,
+.c-teaser {
   font-family: "SolaimanLipi", Rubik, Helvetica, sans-serif !important;
 }
 

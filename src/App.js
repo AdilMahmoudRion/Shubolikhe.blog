@@ -6,10 +6,13 @@ import AboutMe from "./Components/Pages/About/AboutMe";
 import Tags from "./Components/Pages/Tags/Tags";
 import Contact from "./Components/Pages/Contact/Contact";
 import BlogRead from "./Components/Pages/BlogRead/BlogRead";
+import Blogs from "./Components/Pages/Blogs/Blogs";
+// import Backend from "./Components/Provider/Backend/Backend";
 
 function App() {
   return (
     <>
+      {/* <Backend> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,8 +21,10 @@ function App() {
           <Route path="blog" element={<Tags />} />
           <Route path="contact" element={<Contact />} />
           <Route path="read-blog/:id" element={<BlogRead />} />
+          <Route path="tag-blog/:query" element={<Blogs />} />
         </Routes>
       </BrowserRouter>
+      {/* </Backend> */}
     </>
   );
 }
