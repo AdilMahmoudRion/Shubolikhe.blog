@@ -218,29 +218,29 @@
   flex: 1;
   text-align: center;
 }
-.c-share__link--twitter {
-  background-color: #1da1f2;
-}
 .c-share__link {
   display: block;
   padding: 5.5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+.c-share__link--twitter {
+  background-color: #1da1f2;
+}
 .c-share__link--clipboard {
-  background-color: #44bd32;
+  background-color: #721bd4;
 }
 .c-share__link--email {
-  background-color: #000;
+  background-color: #fff399;
 }
 .c-share__link--pinterest {
-  background-color: #bd081c;
+  background-color: #ca2127;
 }
 .c-share__link--linkedin {
-  background-color: #0077b5;
+  background-color: #2867b2;
 }
 .c-share__link--facebook {
-  background-color: #3b5998;
+  background-color: #1976d2;
 }
 
 .icon {
@@ -250,6 +250,9 @@
   height: 25px;
   overflow: hidden;
   fill: currentColor;
+}
+.icon > img {
+  margin: 0;
 }
 .c-share__icon {
   vertical-align: middle;
@@ -270,4 +273,7 @@
   line-height: 42px;
   font-style: normal;
   font-weight: 400;
+}
+div > img {
+  margin: 15px auto;
 }

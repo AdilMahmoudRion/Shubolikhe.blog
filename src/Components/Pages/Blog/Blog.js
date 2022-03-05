@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import "./Blog.css";
-import img1 from "../../Shared/Images/posts/20.jpg";
-import img2 from "../../Shared/Images/posts/11.jpg";
+import { Link } from "react-router-dom";
 import blog1 from "../../Shared/Images/posts/1.jpg";
+import img2 from "../../Shared/Images/posts/11.jpg";
 import blog2 from "../../Shared/Images/posts/2.jpg";
+import img1 from "../../Shared/Images/posts/20.jpg";
 import blog3 from "../../Shared/Images/posts/3.jpg";
 import blog4 from "../../Shared/Images/posts/4.jpg";
 import blog5 from "../../Shared/Images/posts/5.jpg";
 import facebook from "../../Shared/Images/social/facebook.png";
-import twitter from "../../Shared/Images/social/twitter.png";
 import linkedin from "../../Shared/Images/social/linkedin.png";
 import pinterest from "../../Shared/Images/social/pinterest.png";
-import { Link } from "react-router-dom";
+import twitter from "../../Shared/Images/social/twitter.png";
+import "./Blog.css";
 
 const blog = [
   {
@@ -53,7 +53,6 @@ const blog = [
 
 const Blog = () => {
   const [blog, setBlog] = useState([]);
-  console.log(blog);
   useEffect(() => {
     fetch("http://localhost:5000/blog")
       .then((res) => res.json())
@@ -64,9 +63,9 @@ const Blog = () => {
   }, []);
   return (
     <>
-      <div className="py-4 px-5 lg:px-52 bg-white">
-        <div class="grid md:grid-cols-3 sm:grid-cols-1  md:gap-10">
-          <div class="blog-post-card sm:col-span-1 md:col-span-2">
+      <section className="blog-section py-4 px-5 lg:px-52 bg-white">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1  md:gap-10">
+          <div className="blog-post-card sm:col-span-1 md:col-span-2">
             <div className="blog-post-image">
               <img src={img1} alt="post 1" />
             </div>
@@ -89,7 +88,7 @@ const Blog = () => {
                     className="social-icon"
                     src={linkedin}
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </Link>
                 <Link to="">
@@ -101,7 +100,7 @@ const Blog = () => {
               Setting up your own Ghost
             </Link>
           </div>
-          <div class="blog-post-card col-span-1">
+          <div className="blog-post-card col-span-1">
             <div className="blog-post-image">
               <img src={img2} alt="post 1" />
             </div>
@@ -124,7 +123,7 @@ const Blog = () => {
                     className="social-icon"
                     src={linkedin}
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </a>
                 <a href="">
@@ -140,10 +139,10 @@ const Blog = () => {
           {blog.map((blog) => (
             <Link
               to={`/read-blog/${blog._id}`}
-              class="blog-post-card-section col-span-1"
+              className="blog-post-card-section col-span-1"
             >
               <div className="blog-post-image-section">
-                <img class="" src={blog?.img} alt="post 1" />
+                <img className="" src={blog?.img} alt="post 1" />
               </div>
               <div className="blog-post-title-section">
                 <div className="blog-post-title">
@@ -164,7 +163,7 @@ const Blog = () => {
                       className="social-icon"
                       src={linkedin}
                       alt=""
-                      srcset=""
+                      srcSet=""
                     />
                   </Link>
                   <Link to="#">
@@ -177,8 +176,8 @@ const Blog = () => {
               </Link>
               <div>
                 <time
-                  class="blog-published-time"
-                  datetime="2017-03-27"
+                  className="blog-published-time"
+                  dateTime="2017-03-27"
                   title="27 March 2017"
                 >
                   {blog?.date}
@@ -187,7 +186,7 @@ const Blog = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 };

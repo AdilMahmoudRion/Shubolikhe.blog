@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../../Shared/Footer/Footer";
-import "./Tags.css";
-import Navigation from "../../Shared/Navigation/Navigation";
 import blog1 from "../../Shared/Images/posts/1.jpg";
 import blog2 from "../../Shared/Images/posts/2.jpg";
 import blog3 from "../../Shared/Images/posts/3.jpg";
 import blog4 from "../../Shared/Images/posts/4.jpg";
 import blog5 from "../../Shared/Images/posts/5.jpg";
-import { Link } from "react-router-dom";
+import Navigation from "../../Shared/Navigation/Navigation";
+import "./Tags.css";
 
 const blog = [
   {
@@ -64,10 +64,10 @@ const Tags = () => {
         </div>
         <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap">
           {blog.map((blog) => (
-            <Link to="#" class="tags-card col-span-1">
-              <img class="tags-image" src={blog.img} alt="post 1" />
+            <Link to="#" className="tags-card col-span-1">
+              <img className="tags-image" src={blog.img} alt="post 1" />
               <h2 className="tags-title">
-                Title <span class="u-font-size-tiny">(24)</span>
+                Title <span className="u-font-size-tiny">(24)</span>
               </h2>
             </Link>
           ))}
