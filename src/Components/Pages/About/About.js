@@ -24,10 +24,6 @@ const About = () => {
               Repudiandae, quasi iusto, provident eos eaque architecto libero
               odit omnis esse, beatae cumque quo numquam harum nam facilis
               voluptatem deserunt aliquid. Ab, sequi odit dolore iure, mollitia
-              corporis ea dignissimos eligendi facilis autem aliquam voluptates
-              suscipit, fugit reiciendis vel aut animi consequatur. Dolor
-              repellendus eius similique possimus perspiciatis numquam!
-              Necessitatibus nulla natus labore id tempore!
             </p>
 
             <div className="about-me-social-link-section">

@@ -9,11 +9,10 @@ const Server = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(0);
-
   const size = 9;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blog?page=${page}&&size=${size}`)
+    fetch(`http://localhost:5000/h-blog?page=${page}&&size=${size}`)
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
@@ -28,7 +27,7 @@ const Server = () => {
     fetch("http://localhost:5000/blog")
       .then((res) => res.json())
       .then((data) => {
-        // setIsLoading(false);
+        setIsLoading(false);
         setBlog(data);
       });
   }, []);
@@ -38,7 +37,7 @@ const Server = () => {
       fetch(`http://localhost:5000/read-blog/${id}`)
         .then((res) => res.json())
         .then((data) => {
-          // setIsLoading(false);
+          setIsLoading(false);
           setReadBlog(data);
         });
     }, [id]);
@@ -48,7 +47,7 @@ const Server = () => {
       fetch(`http://localhost:5000/tag-blog/${query}`)
         .then((res) => res.json())
         .then((data) => {
-          // setIsLoading(false);
+          setIsLoading(false);
           setTagBlog(data);
         });
     }, [query]);
@@ -64,6 +63,7 @@ const Server = () => {
     page,
     pageCount,
     HomePageBlog,
+    isLoading,
   };
 };
 

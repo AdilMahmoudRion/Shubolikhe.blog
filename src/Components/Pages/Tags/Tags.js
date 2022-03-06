@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Server from "../../Hooks/Server";
 import Footer from "../../Shared/Footer/Footer";
 import blog1 from "../../Shared/Images/posts/1.jpg";
 import blog2 from "../../Shared/Images/posts/2.jpg";
@@ -49,6 +50,7 @@ const tag = [
 ];
 
 const Tags = () => {
+  // const { tagBlog } = Server();
   return (
     <>
       <article className="lg:mx-52 sm:px-0 py-3 pb-5">
@@ -64,7 +66,7 @@ const Tags = () => {
               <img className="tags-image" src={tag.img} alt="post 1" />
               <h2 className="tags-title">
                 {tag.title}{" "}
-                {/* <span className="u-font-size-tiny">({tag.length})</span> */}
+                {/* <span className="u-font-size-tiny">({tagBlog.length})</span> */}
               </h2>
             </Link>
           ))}

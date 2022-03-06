@@ -64,9 +64,17 @@
   display: flex;
   gap: 12px;
 }
-.blog-post-title-social-link:hover {
-  display: flex;
-  gap: 12px;
+.social-icon {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: none !important;
+  -webkit-transition: display 0.5s ease-in-out;
+  transition: display 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.blog-post-card-section:hover .social-icon {
+  display: block !important;
+  /* background-color: red; */
 }
 .card-header {
   clear: both;
@@ -79,10 +87,10 @@
   transition: border-bottom 0.5s ease-in-out;
   text-decoration: none;
 }
-.card-header:hover {
+.blog-post-card-section:hover .card-header {
+  border-bottom: 1px solid #b70038;
   width: fit-content;
   display: block;
-  border-bottom: 2px solid #b70038;
 }
 .blog-published-time {
   line-height: 1;
