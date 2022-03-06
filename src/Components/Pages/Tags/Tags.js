@@ -51,8 +51,7 @@ const tag = [
 const Tags = () => {
   return (
     <>
-      <Navigation></Navigation>
-      <article className=" px-5  lg:mx-52 sm:px-10">
+      <article className="lg:mx-52 sm:px-0 py-3 pb-5">
         <div className="bg-[#f4f6f8] px-8 py-10 mb-8">
           <h1 className="text-2xl">Tags</h1>
         </div>
@@ -64,13 +63,13 @@ const Tags = () => {
             >
               <img className="tags-image" src={tag.img} alt="post 1" />
               <h2 className="tags-title">
-                {tag.title} <span className="u-font-size-tiny">(24)</span>
+                {tag.title}{" "}
+                {/* <span className="u-font-size-tiny">({tag.length})</span> */}
               </h2>
             </Link>
           ))}
         </div>
       </article>
-      <Footer></Footer>
     </>
   );
 };

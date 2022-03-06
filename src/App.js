@@ -7,6 +7,7 @@ import Tags from "./Components/Pages/Tags/Tags";
 import Contact from "./Components/Pages/Contact/Contact";
 import BlogRead from "./Components/Pages/BlogRead/BlogRead";
 import Blogs from "./Components/Pages/Blogs/Blogs";
+import Tag from "./Components/Pages/Tags/Tag";
 // import Backend from "./Components/Provider/Backend/Backend";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<AboutMe />} />
-          <Route path="blog" element={<Tags />} />
+          <Route path="blog" element={<Tag />} />
           <Route path="contact" element={<Contact />} />
           <Route path="read-blog/:id" element={<BlogRead />} />
           <Route path="tag-blog/:query" element={<Blogs />} />

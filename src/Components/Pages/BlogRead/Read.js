@@ -16,8 +16,6 @@ const Read = () => {
   const { blog, readBlog, HandleReadBlog } = Server();
   HandleReadBlog(id);
 
-  console.log(readBlog);
-
   return (
     <article className="py-4 px-5 lg:px-52 bg-white">
       <div className="md:grid lg:grid-cols-3 widget">
@@ -53,7 +51,8 @@ const Read = () => {
               <div className="o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--2-4-l">
                 <ul className="c-share o-plain-list">
                   <li className="c-share__item">
-                    <a
+                    <Link
+                      to="#"
                       className="c-share__link c-share__link--twitter"
                       title="Share on Twitter"
                       aria-label="Share on Twitter"
@@ -63,11 +62,12 @@ const Read = () => {
                       <div className="icon icon--ei-sc-twitter icon--s c-share__icon">
                         <img src={twitter} alt="" />
                       </div>
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="c-share__item">
-                    <a
+                    <Link
+                      to="#"
                       className="c-share__link c-share__link--facebook"
                       title="Share on Facebook"
                       aria-label="Share on Facebook"
@@ -77,11 +77,12 @@ const Read = () => {
                       <div className="icon icon--ei-sc-facebook icon--s c-share__icon">
                         <img src={facebook} alt="" />
                       </div>
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="c-share__item">
-                    <a
+                    <Link
+                      to="#"
                       className="c-share__link  c-share__link--linkedin"
                       title="Share on LinkedIn"
                       aria-label="Share on LinkedIn"
@@ -91,11 +92,12 @@ const Read = () => {
                       <div className="icon icon--ei-sc-linkedin icon--s c-share__icon">
                         <img src={linkedin} alt="" />
                       </div>
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="c-share__item">
-                    <a
+                    <Link
+                      to="#"
                       className="c-share__link c-share__link--pinterest"
                       title="Share on Pinterest"
                       aria-label="Share on Pinterest"
@@ -105,11 +107,12 @@ const Read = () => {
                       <div className="icon icon--ei-sc-pinterest icon--s c-share__icon">
                         <img src={pinterest} alt="" />
                       </div>
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="c-share__item">
-                    <a
+                    <Link
+                      to="#"
                       className="c-share__link c-share__link--email"
                       title="Share via Email"
                       aria-label="Share via Email"
@@ -118,11 +121,12 @@ const Read = () => {
                       <div className="icon icon--ei-envelope icon--s c-share__icon">
                         <img src={email} alt="" />
                       </div>
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="c-share__item">
-                    <a
+                    <Link
+                      to="#"
                       className="c-share__link c-share__link--clipboard"
                       title="Copy link"
                       aria-label="Copy link"
@@ -133,7 +137,7 @@ const Read = () => {
                       <div className="icon icon--ei-link icon--s c-share__icon">
                         <img src={copy} alt="" />
                       </div>
-                    </a>
+                    </Link>
                   </li>
                 </ul>{" "}
               </div>
@@ -158,7 +162,7 @@ const Read = () => {
               <h3 className="c-widget__title text-left">Recent Posts</h3>
               <>
                 {blog.slice(0, 5).map((blog) => (
-                  <div className="c-teaser">
+                  <div className="c-teaser" key={blog._id}>
                     <Link
                       to={`/read-blog/${blog._id}`}
                       className="c-teaser__content text-left"
@@ -188,22 +192,22 @@ const Read = () => {
             <div className="c-widget">
               <h3 className="c-widget__title">Tags</h3>
               <div className="c-tags">
-                <Link className="c-tags-link" to="/">
+                <Link className="c-tags-link" to="/tag-blog/Education">
                   Education
                 </Link>
-                <Link className="c-tags-link" to="/">
+                <Link className="c-tags-link" to="/tag-blog/Food">
                   Food
                 </Link>
-                <Link className="c-tags-link" to="/">
+                <Link className="c-tags-link" to="/tag-blog/Lifestyle">
                   Lifestyle
                 </Link>
-                <Link className="c-tags-link" to="/">
+                <Link className="c-tags-link" to="/tag-blog/Nature">
                   Nature
                 </Link>
-                <Link className="c-tags-link" to="/">
+                <Link className="c-tags-link" to="/tag-blog/Travel">
                   Travel
                 </Link>
-                <Link className="c-tags-link" to="/">
+                <Link className="c-tags-link" to="/tag-blog/Work">
                   Work
                 </Link>
               </div>

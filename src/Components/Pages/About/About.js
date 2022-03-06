@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import author2 from "../../Shared/Images/author-img2.jpg";
 import author from "../../Shared/Images/author.jpg";
 import facebook from "../../Shared/Images/social/facebook.png";
@@ -30,23 +31,23 @@ const About = () => {
             </p>
 
             <div className="about-me-social-link-section">
-              <a href="#">
+              <Link to="#">
                 <img className="about-social-icon" src={twitter} alt="" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="#">
                 <img className="about-social-icon" src={facebook} alt="" />
-              </a>
-              <a href="">
+              </Link>
+              <Link to="#">
                 <img
                   className="about-social-icon"
                   src={linkedin}
                   alt=""
                   srcSet=""
                 />
-              </a>
-              <a href="">
+              </Link>
+              <Link to="#">
                 <img className="about-social-icon" src={pinterest} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -11,15 +11,15 @@ const Footer = () => {
       <footer className="py-16 px-5  lg:px-52 bg-[#f4f6f8] sm:px-10 mt-10">
         <div className="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4">
           <div className="col-span-1 md:col-span-2 lg:col-span-1 mb-6 md:mb-0">
-            <a
-              href="https://flowbite.com"
+            <Link
+              to="#"
               target="_blank"
               className="flex items-center text-4xl font-extrabold"
             >
               <h1 className="text-4xl font-light pb-5 text-center font-semibold text-[#b70038] tracking-wide">
                 Shubolikhe.Blog
               </h1>
-            </a>
+            </Link>
           </div>
           <div className="md:col-span-2 lg:col-span-2">
             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-8 sm:gap-6 sm:grid-cols-3">
@@ -149,18 +149,18 @@ const Footer = () => {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a href="#">
+            <Link to="#">
               <img className="social-icon" src={twitter} alt="" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img className="social-icon" src={facebook} alt="" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img className="social-icon" src={linkedin} alt="" srcSet="" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <img className="social-icon" src={pinterest} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
       </footer>

@@ -5,7 +5,25 @@ const Server = () => {
   const [blog, setBlog] = useState([]);
   const [readBlog, setReadBlog] = useState([]);
   const [tagBlog, setTagBlog] = useState([]);
-  console.log(tagBlog);
+  const [HomePageBlog, setHomePageBlog] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [page, setPage] = useState(0);
+  const [pageCount, setPageCount] = useState(0);
+
+  const size = 9;
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/blog?page=${page}&&size=${size}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setIsLoading(false);
+        setHomePageBlog(data.result);
+        const count = data.count;
+        const pageCountNumber = Math.ceil(count / size);
+        setPageCount(pageCountNumber);
+      });
+  }, [page]);
+
   useEffect(() => {
     fetch("http://localhost:5000/blog")
       .then((res) => res.json())
@@ -42,6 +60,10 @@ const Server = () => {
     HandleReadBlog,
     HandleTagBlog,
     tagBlog,
+    setPage,
+    page,
+    pageCount,
+    HomePageBlog,
   };
 };
 
