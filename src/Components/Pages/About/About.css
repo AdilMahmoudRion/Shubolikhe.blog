@@ -1,10 +1,10 @@
 @media (min-width: 768px) {
-  .author-image {
+  .author-about {
     width: 100%;
-    height: 500px;
+    height: 350px;
   }
 }
-.author-image > img {
+.author-image img {
   width: 100%;
   height: 100%;
   margin: 0;

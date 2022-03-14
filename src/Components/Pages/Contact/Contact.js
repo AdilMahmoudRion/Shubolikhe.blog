@@ -8,7 +8,7 @@ const Contact = () => {
     <>
       <Navigation></Navigation>
       <section className="py-4 px-5 lg:px-52 bg-white">
-        <div className="md:grid lg:grid-cols-3 md:gap-4">
+        <div className="md:grid lg:grid-cols-3 md:gap-4 author-about">
           <div className="author-image col-span-2">
             <img src={author} alt="" />
           </div>
@@ -18,7 +18,7 @@ const Contact = () => {
             </h1>
           </div>
         </div>
-        <div className="author-introduction lg:px-56 mt-10">
+        <div className="author-introduction xl:px-40 lg:px-32 mt-10">
           <p className="py-4">
             Sorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
             cupiditate unde consequuntur aperiam earum, . Magni facere

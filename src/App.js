@@ -5,12 +5,10 @@ import Contact from "./Components/Pages/Contact/Contact";
 import BlogRead from "./Components/Pages/BlogRead/BlogRead";
 import Blogs from "./Components/Pages/Blogs/Blogs";
 import Tag from "./Components/Pages/Tags/Tag";
-// import Backend from "./Components/Provider/Backend/Backend";
 
 function App() {
   return (
     <>
-      {/* <Backend> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +20,6 @@ function App() {
           <Route path="tag-blog/:query" element={<Blogs />} />
         </Routes>
       </BrowserRouter>
-      {/* </Backend> */}
     </>
   );
 }

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Server from "../../Hooks/Server";
-import img2 from "../../Shared/Images/posts/11.jpg";
-import img1 from "../../Shared/Images/posts/20.jpg";
 import facebook from "../../Shared/Images/social/facebook.png";
 import linkedin from "../../Shared/Images/social/linkedin.png";
 import pinterest from "../../Shared/Images/social/pinterest.png";
@@ -19,7 +17,7 @@ const Blog = () => {
           <div class="text-center">
             <svg
               role="status"
-              class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              class="inline mr-2 w-8 h-8  animate-spin text-gray-600 fill-[#b70038]"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -35,18 +33,18 @@ const Blog = () => {
             </svg>
           </div>
         )}
-        <div className="grid md:grid-cols-3 sm:grid-cols-1  md:gap-7">
+        <div className="grid md:grid-cols-3 sm:grid-cols-1  md:gap-6">
           {HomePageBlog.slice(0, 1).map((blog) => (
             <Link
               to={`/read-blog/${blog._id}`}
-              className="blog-post-card sm:col-span-1 md:col-span-2"
+              className="blog-post-card sm:col-span-1 md:col-span-2 flex flex-col"
               key={blog?._id}
             >
               <div className="blog-post-image">
-                <img src={blog?.img} alt="post 1" />
+                <img src={blog?.img} alt="post 1" className="m-0" />
               </div>
               <div className="blog-post-title-section">
-                <div className="blog-post-title">
+                <div className="blog-post-title ">
                   <Link to="#" className="">
                     {blog?.category}
                   </Link>
@@ -89,7 +87,7 @@ const Blog = () => {
           {HomePageBlog.slice(1, 2).map((blog) => (
             <div className="blog-post-card col-span-1" key={blog?._id}>
               <div className="blog-post-image">
-                <img src={blog?.img} alt="post 1" />
+                <img src={blog?.img} alt="post 1" className="m-0" />
               </div>
               <div className="blog-post-title-section">
                 <div className="blog-post-title">
@@ -139,7 +137,7 @@ const Blog = () => {
               key={blog?._id}
             >
               <div className="blog-post-image-section">
-                <img className="" src={blog?.img} alt="post 1" />
+                <img className="m-0" src={blog?.img} alt="post 1" />
               </div>
               <div className="blog-post-title-section">
                 <div className="blog-post-title">

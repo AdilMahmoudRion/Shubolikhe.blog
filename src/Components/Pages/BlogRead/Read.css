@@ -19,7 +19,7 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: end;
-    height: 100%;
+
     border-width: 1px;
     border-color: #ecf0f1 #ecf0f1 #ecf0f1 #fff;
   }
@@ -48,7 +48,7 @@
   counter-reset: widget;
 }
 .c-widget {
-  padding: 32px;
+  padding: 10px;
   border-left: 1px solid #ecf0f1;
   border-right: 1px solid #ecf0f1;
   border-bottom: 1px solid #ecf0f1;
@@ -60,8 +60,7 @@
   border-radius: 100%;
   -webkit-box-shadow: 0 0 0 4px #f4f6f8;
   box-shadow: 0 0 0 4px #f4f6f8;
-  width: 88px;
-  height: 88px;
+
   margin: 0 auto;
   margin-bottom: 16px;
   border-radius: 100%;
@@ -277,4 +276,7 @@
 }
 div > img {
   margin: 15px auto;
+}
+.c-post-hero__card {
+  max-height: 350px;
 }

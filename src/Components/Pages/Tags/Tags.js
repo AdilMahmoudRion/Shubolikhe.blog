@@ -54,10 +54,10 @@ const Tags = () => {
   return (
     <>
       <article className="lg:mx-52 sm:px-0 py-3 pb-5">
-        <div className="bg-[#f4f6f8] px-8 py-10 mb-8">
+        <div className="bg-[#f4f6f8] px-8 py-5 mb-8">
           <h1 className="text-2xl">Tags</h1>
         </div>
-        <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap">
+        <div className="grid px-5 md:px-0  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tag.map((tag) => (
             <Link
               to={tag.url.concat(tag.title)}

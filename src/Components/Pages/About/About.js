@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <section className="about-section py-4 lg:px-52 bg-white px-5">
-        <div className="md:grid lg:grid-cols-3 md:gap-4">
+        <div className="md:grid lg:grid-cols-3 md:gap-4 author-about">
           <div className="author-image col-span-2">
             <img src={author} alt="" />
           </div>
@@ -22,8 +22,7 @@ const About = () => {
             <p className="about-me">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae, quasi iusto, provident eos eaque architecto libero
-              odit omnis esse, beatae cumque quo numquam harum nam facilis
-              voluptatem deserunt aliquid. Ab, sequi odit dolore iure, mollitia
+              odit omnis esse,
             </p>
 
             <div className="about-me-social-link-section">
@@ -47,7 +46,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="author-introduction lg:px-48 mt-10">
+        <div className="author-introduction xl:px-40 lg:px-32 mt-10">
           <p className="py-4">
             Sorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
             cupiditate unde consequuntur aperiam earum, . Magni facere

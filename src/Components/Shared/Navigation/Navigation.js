@@ -27,14 +27,20 @@ const Navigation = () => {
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XIcon
+                        className="block h-6 w-6 text-[#b70038]"
+                        aria-hidden="true"
+                      />
                     ) : (
-                      <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                      <MenuIcon
+                        className="block h-6 w-6 text-[#b70038]"
+                        aria-hidden="true"
+                      />
                     )}
                   </Disclosure.Button>
                 </div>
                 <div className="mx-auto">
-                  <h1 className="text-5xl md:pb-5 py-3 text-center font-light text-[#b70038] tracking-wide">
+                  <h1 className="text-3xl md:text-5xl md:pb-5 py-3 text-center font-light text-[#b70038] tracking-wide">
                     Shubolikhe
                   </h1>
                   <div className="hidden sm:block sm:ml-6 md:ml-0">

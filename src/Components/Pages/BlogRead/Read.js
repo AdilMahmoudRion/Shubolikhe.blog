@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Server from "../../Hooks/Server";
 import author2 from "../../Shared/Images/author-img2.jpg";
@@ -20,10 +20,10 @@ const Read = () => {
   return (
     <article className="py-4 px-5 lg:px-52 bg-white">
       <div className="md:grid lg:grid-cols-3 widget">
-        <div className="author-image col-span-2">
-          <img src={readBlog?.img} alt="images" />
+        <div className="author-image col-span-2 c-post-hero__card">
+          <img src={readBlog?.img} alt="images" width="100%" />
         </div>
-        <div className="c-post-hero__content col-span-1 ">
+        <div className="c-post-hero__content col-span-1  c-post-hero__card">
           <h1 className="c-post-hero__title">{readBlog?.title}</h1>
           <div className="c-post-hero__meta">{readBlog?.date}</div>
         </div>
@@ -32,7 +32,7 @@ const Read = () => {
         <div class="text-center">
           <svg
             role="status"
-            class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+            class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#b70038]"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const Read = () => {
       )}
       <div>
         <div className="md:grid grid-cols-3">
-          <div className="author-introduction col-span-1 md:col-span-2 lg:col-span-2 lg:pr-10  pt-8">
+          <div className="author-introduction col-span-1 md:col-span-2 lg:col-span-2 lg:pr-4  pt-8">
             <div
               className="post__description"
               dangerouslySetInnerHTML={{ __html: readBlog?.blog }}
