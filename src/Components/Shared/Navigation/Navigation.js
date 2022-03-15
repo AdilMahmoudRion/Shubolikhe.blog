@@ -53,7 +53,7 @@ const Navigation = () => {
                             item.current
                               ? " text-[#222] uppercase"
                               : "  hover:text-[#b70038] uppercase",
-                            "px-3 py-2 rounded-md text-sm font-medium uppercase"
+                            "px-3 py-2 rounded-md text-md font-medium uppercase"
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >

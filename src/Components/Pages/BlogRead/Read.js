@@ -24,7 +24,11 @@ const Read = () => {
           <img src={readBlog?.img} alt="images" width="100%" />
         </div>
         <div className="c-post-hero__content col-span-1  c-post-hero__card">
-          <h1 className="c-post-hero__title">{readBlog?.title}</h1>
+          <h1 className="c-post-hero__title">
+            {" "}
+            {`${readBlog?.title?.slice(0, 50).concat("..")}`}
+          </h1>
+
           <div className="c-post-hero__meta">{readBlog?.date}</div>
         </div>
       </div>
