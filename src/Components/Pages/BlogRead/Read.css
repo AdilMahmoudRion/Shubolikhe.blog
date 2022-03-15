@@ -274,9 +274,3 @@
   font-style: normal;
   font-weight: 400;
 }
-div > img {
-  margin: 15px auto;
-}
-.c-post-hero__card {
-  max-height: 350px;
-}
