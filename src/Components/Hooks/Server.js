@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Server = () => {
   const [blog, setBlog] = useState([]);
@@ -12,7 +11,9 @@ const Server = () => {
   const size = 9;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/h-blog?page=${page}&&size=${size}`)
+    fetch(
+      `https://sheltered-caverns-64796.herokuapp.com/h-blog?page=${page}&&size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
@@ -24,7 +25,7 @@ const Server = () => {
   }, [page]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/blog")
+    fetch("https://sheltered-caverns-64796.herokuapp.com/blog")
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
@@ -34,7 +35,7 @@ const Server = () => {
 
   const HandleReadBlog = (id) => {
     useEffect(() => {
-      fetch(`http://localhost:5000/read-blog/${id}`)
+      fetch(`https://sheltered-caverns-64796.herokuapp.com/read-blog/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setIsLoading(false);
@@ -44,7 +45,7 @@ const Server = () => {
   };
   const HandleTagBlog = (query) => {
     useEffect(() => {
-      fetch(`http://localhost:5000/tag-blog/${query}`)
+      fetch(`https://sheltered-caverns-64796.herokuapp.com/tag-blog/${query}`)
         .then((res) => res.json())
         .then((data) => {
           setIsLoading(false);
