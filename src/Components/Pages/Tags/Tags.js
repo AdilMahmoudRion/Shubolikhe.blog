@@ -7,25 +7,29 @@ import blog2 from "../../Shared/Images/posts/2.jpg";
 import blog3 from "../../Shared/Images/posts/3.jpg";
 import blog4 from "../../Shared/Images/posts/4.jpg";
 import blog5 from "../../Shared/Images/posts/5.jpg";
+import blog6 from "../../Shared/Images/posts/6.jpg";
+import blog7 from "../../Shared/Images/posts/7 - 7heiAgq.jpg";
+import blog8 from "../../Shared/Images/posts/8.jpg";
+import blog9 from "../../Shared/Images/posts/9.jpg";
 import Navigation from "../../Shared/Navigation/Navigation";
 import "./Tags.css";
 
 const tag = [
   {
     id: "1",
-    title: "Education",
+    title: "Books",
     img: `${blog1}`,
     url: `/tag-blog/`,
   },
   {
     id: "2",
-    title: "Lifestyle",
+    title: "Music",
     img: `${blog2}`,
     url: `/tag-blog/`,
   },
   {
     id: "3",
-    title: "Nature",
+    title: "Food",
     img: `${blog3}`,
     url: `/tag-blog/`,
   },
@@ -37,14 +41,32 @@ const tag = [
   },
   {
     id: "5",
-    title: "Something",
+    title: "Nature",
     img: `${blog5}`,
     url: `/tag-blog/`,
   },
   {
     id: "6",
-    title: "Novel",
-    img: `${blog5}`,
+    title: "Thoughts",
+    img: `${blog6}`,
+    url: `/tag-blog/`,
+  },
+  {
+    id: "7",
+    title: "Thoughts",
+    img: `${blog7}`,
+    url: `/tag-blog/`,
+  },
+  {
+    id: "8",
+    title: "Review",
+    img: `${blog8}`,
+    url: `/tag-blog/`,
+  },
+  {
+    id: "9",
+    title: "MovingPicture",
+    img: `${blog9}`,
     url: `/tag-blog/`,
   },
 ];

@@ -30,18 +30,18 @@ const Footer = () => {
                 <ul>
                   <li className="mb-2">
                     <Link
-                      to="/tag-blog/Education"
+                      to="/tag-blog/Review"
                       className="hover:text-[#b70038] text-[#222222]"
                     >
-                      Education
+                      Review
                     </Link>
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/tag-blog/Lifestyle"
+                      to="/tag-blog/Food"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
-                      Lifestyle
+                      Food
                     </Link>
                   </li>
                   <li className="mb-2">
@@ -85,10 +85,10 @@ const Footer = () => {
                   </li>
                   <li className="mb-2">
                     <Link
-                      to="/tag-blog/Novel"
+                      to="/tag-blog/Thoughts"
                       className=" hover:text-[#b70038] text-[#222222]"
                     >
-                      Novel
+                      Thoughts
                     </Link>
                   </li>
                   <li className="mb-2">

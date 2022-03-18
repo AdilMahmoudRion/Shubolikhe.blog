@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import author2 from "../../Shared/Images/author-img2.jpg";
-import author from "../../Shared/Images/author.jpg";
+import author from "../../Shared/Images/authorimg.jpeg";
 import facebook from "../../Shared/Images/social/facebook.png";
 import linkedin from "../../Shared/Images/social/linkedin.png";
 import pinterest from "../../Shared/Images/social/pinterest.png";
@@ -20,9 +20,11 @@ const About = () => {
             <h1 className="text-5xl font-bold pb-5 text-[#222222]">About Me</h1>
 
             <p className="about-me">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, quasi iusto, provident eos eaque architecto libero
-              odit omnis esse,
+              Writing has such a power to aid someone to express almost all the
+              feelings one experiences or may perceive, so I have chosen it. I
+              want my thoughts to exist somewhere since human brain has
+              limitations and we tend to forget things. Hope this will be a
+              pleasant journey of journalizing my scribbled thoughts.
             </p>
 
             <div className="about-me-social-link-section">

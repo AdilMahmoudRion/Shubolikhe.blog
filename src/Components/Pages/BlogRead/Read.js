@@ -11,6 +11,54 @@ import pinterest from "../../Shared/Images/social/s.pinterest.png";
 import twitter from "../../Shared/Images/social/s.twitter.png";
 import "./Read.css";
 
+const tag = [
+  {
+    id: "1",
+    title: "Books",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "2",
+    title: "Music",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "3",
+    title: "Food",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "4",
+    title: "Travel",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "5",
+    title: "Nature",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "6",
+    title: "Thoughts",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "7",
+    title: "Thoughts",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "8",
+    title: "Review",
+    url: `/tag-blog/`,
+  },
+  {
+    id: "9",
+    title: "MovingPicture",
+    url: `/tag-blog/`,
+  },
+];
+
 const Read = () => {
   const { id } = useParams();
   const { blog, readBlog, HandleReadBlog, isLoading } = Server();
@@ -62,13 +110,13 @@ const Read = () => {
             <div className="o-grid">
               <div className="o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--2-4-l">
                 <div className="c-tags">
-                  <Link className="c-tags-link" to="/tag/travel/">
+                  <Link className="c-tags-link" to="/tag-blog/Travel">
                     Travel
                   </Link>
-                  <Link className="c-tags-link" to="/tag/lifestyle/">
-                    Lifestyle
+                  <Link className="c-tags-link" to="/tag-blog/Thoughts">
+                    Thoughts
                   </Link>
-                  <Link className="c-tags-link" to="/tag/nature/">
+                  <Link className="c-tags-link" to="/tag-blog/Nature">
                     Nature
                   </Link>
                 </div>
@@ -176,11 +224,14 @@ const Read = () => {
                 alt="Author Images"
               />
               <h1 className="c-widget-author__title">
-                <Link to="/">Phillip Reed</Link>
+                <Link to="/">Sabrina Shuborna</Link>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet, sit magna iracundia consectetuer eu,
-                in ferri suscipit postulant vel. Et per sint solet verear.
+                Writing has such a power to aid someone to express almost all
+                the feelings one experiences or may perceive, so I have chosen
+                it. I want my thoughts to exist somewhere since human brain has
+                limitations and we tend to forget things. Hope this will be a
+                pleasant journey of journalizing my scribbled thoughts.
               </p>
             </div>
             <div className="c-widget">
@@ -217,24 +268,14 @@ const Read = () => {
             <div className="c-widget">
               <h3 className="c-widget__title">Tags</h3>
               <div className="c-tags">
-                <Link className="c-tags-link" to="/tag-blog/Education">
-                  Education
-                </Link>
-                <Link className="c-tags-link" to="/tag-blog/Food">
-                  Food
-                </Link>
-                <Link className="c-tags-link" to="/tag-blog/Lifestyle">
-                  Lifestyle
-                </Link>
-                <Link className="c-tags-link" to="/tag-blog/Nature">
-                  Nature
-                </Link>
-                <Link className="c-tags-link" to="/tag-blog/Travel">
-                  Travel
-                </Link>
-                <Link className="c-tags-link" to="/tag-blog/Work">
-                  Work
-                </Link>
+                {tag.map((data) => (
+                  <Link
+                    className="c-tags-link"
+                    to={data.url.concat(data.title)}
+                  >
+                    {data?.title}
+                  </Link>
+                ))}
               </div>
             </div>
             <div className="c-widget">
