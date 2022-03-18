@@ -50,12 +50,11 @@ const About = () => {
         </div>
         <div className="author-introduction xl:px-40 lg:px-32 mt-10">
           <p className="py-4">
-            Sorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
-            cupiditate unde consequuntur aperiam earum, . Magni facere
-            exercitationem tempora possimus id ullam quibusdam ratione
-            consequatur sunt iusto neque quasi recusandae obcaecati saepe nisi,
-            sit, excepturi rem optio quas enim accusamus nobis. Accusantium
-            eaque necessitatibus perspiciatis quia vitae non accusamus!
+            I like to observe entities both living and non-living, this leads me
+            to give shapes to my own ideas. I try to remain open to multiple
+            interpretations. I like to talk. In this blog, I am writing about
+            various things from my perspective/s so that I can talk to people,
+            stay connected with the growing world.
           </p>
           <figure>
             <img className="author-img" src={author2} alt="" />

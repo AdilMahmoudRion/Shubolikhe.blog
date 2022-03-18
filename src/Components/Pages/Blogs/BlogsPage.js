@@ -11,7 +11,6 @@ const BlogsPage = () => {
 
   const { HandleTagBlog, tagBlog, isLoading } = Server();
   HandleTagBlog(query);
-  console.log(tagBlog);
 
   return (
     <section className="blog-section py-4 px-5 lg:px-52 bg-white">
