@@ -1,7 +1,7 @@
 import { Fragment, React } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/home", current: false },
@@ -46,9 +46,15 @@ const Navigation = () => {
                   <div className="hidden sm:block sm:ml-6 md:ml-0">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
-                        <Link
+                        <NavLink
                           key={item.name}
                           to={item.href}
+                          style={({ isActive }) => {
+                            return {
+                              display: "block",
+                              color: isActive ? "#b70038" : "",
+                            };
+                          }}
                           className={classNames(
                             item.current
                               ? " text-[#222] uppercase"
@@ -58,7 +64,7 @@ const Navigation = () => {
                           aria-current={item.current ? "page" : undefined}
                         >
                           {item.name}
-                        </Link>
+                        </NavLink>
                       ))}
                     </div>
                   </div>
@@ -69,10 +75,15 @@ const Navigation = () => {
             <Disclosure.Panel className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navigation.map((item) => (
-                  <Disclosure.Button
+                  <NavLink
                     key={item.name}
-                    as="a"
-                    href={item.href}
+                    to={item.href}
+                    style={({ isActive }) => {
+                      return {
+                        display: "block",
+                        color: isActive ? "#b70038" : "",
+                      };
+                    }}
                     className={classNames(
                       item.current
                         ? "text-[#222]"
@@ -82,7 +93,7 @@ const Navigation = () => {
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
-                  </Disclosure.Button>
+                  </NavLink>
                 ))}
               </div>
             </Disclosure.Panel>

@@ -14,10 +14,10 @@ const Blog = () => {
     <>
       <section className="blog-section py-4 px-5 lg:px-52 bg-white">
         {isLoading && (
-          <div class="text-center">
+          <div className="text-center">
             <svg
               role="status"
-              class="inline mr-2 w-8 h-8  animate-spin text-gray-600 fill-[#b70038]"
+              className="inline mr-2 w-8 h-8  animate-spin text-gray-600 fill-[#b70038]"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -132,9 +132,9 @@ const Blog = () => {
           ))}
           {HomePageBlog.slice(3, HomePageBlog.length).map((blog) => (
             <Link
+              key={blog?._id}
               to={`/read-blog/${blog._id}`}
               className="blog-post-card-section col-span-1"
-              key={blog?._id}
             >
               <div className="blog-post-image-section">
                 <img className="m-0" src={blog?.img} alt="post 1" />
@@ -197,17 +197,16 @@ const Blog = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </button>
             </li>
             {[...Array(pageCount).keys()].map((number) => (
-              <li>
+              <li key={number}>
                 <button
-                  key={number}
                   onClick={() => setPage(number)}
                   className={
                     number === page
@@ -233,9 +232,9 @@ const Blog = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </button>

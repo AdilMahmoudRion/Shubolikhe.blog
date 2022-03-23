@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import Server from "../../Hooks/Server";
 import author2 from "../../Shared/Images/author-img2.jpg";
 import authorImg from "../../Shared/Images/authorimg.jpeg";
@@ -81,10 +81,10 @@ const Read = () => {
         </div>
       </div>
       {isLoading && (
-        <div class="text-center">
+        <div className="text-center">
           <svg
             role="status"
-            class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#b70038]"
+            className="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-[#b70038]"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -239,8 +239,14 @@ const Read = () => {
               <>
                 {blog.slice(0, 5).map((blog) => (
                   <div className="c-teaser" key={blog._id}>
-                    <Link
+                    <NavLink
                       to={`/read-blog/${blog._id}`}
+                      style={({ isActive }) => {
+                        return {
+                          display: "block",
+                          color: isActive ? "#b70038" : "",
+                        };
+                      }}
                       className="c-teaser__content text-left"
                     >
                       <h3 className="c-teaser__title">{blog?.title}</h3>
@@ -251,7 +257,7 @@ const Read = () => {
                       >
                         {`${blog.date?.slice(0, 12).concat("")}`}
                       </time>
-                    </Link>
+                    </NavLink>
                     <div className="c-teaser__media">
                       <img
                         className="c-teaser__image ls-is-cached lazyloaded"

@@ -6,11 +6,10 @@ import Navigation from "../../Shared/Navigation/Navigation";
 const Contact = () => {
   return (
     <>
-      <Navigation></Navigation>
       <section className="py-4 px-5 lg:px-52 bg-white">
         <div className="md:grid lg:grid-cols-3 md:gap-4 author-about">
           <div className="author-image col-span-2">
-            <img src={author} alt="" />
+            <img src={author} alt="" className="author-image" />
           </div>
           <div className="author-information col-span-1 text-center">
             <h1 className="text-5xl font-bold pb-5 text-[#222222]">
@@ -20,12 +19,9 @@ const Contact = () => {
         </div>
         <div className="author-introduction xl:px-40 lg:px-32 mt-10">
           <p className="py-4">
-            Sorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
-            cupiditate unde consequuntur aperiam earum, . Magni facere
-            exercitationem tempora possimus id ullam quibusdam ratione
-            consequatur sunt iusto neque quasi recusandae obcaecati saepe nisi,
-            sit, excepturi rem optio quas enim accusamus nobis. Accusantium
-            eaque necessitatibus perspiciatis quia vitae non accusamus!
+            Trying to reach me? Then arrange some good words and develop some
+            perfect sentences. Now? Just through at to me. I may or may not
+            check them out on a good day.
           </p>
 
           <form>
@@ -57,7 +53,7 @@ const Contact = () => {
                 htmlFor="floating_email"
                 className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#b70038]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Email
+                If I were You I would enter My Email address here
               </label>
             </div>
             <div className="relative z-0 mb-6 w-full group">
@@ -73,19 +69,18 @@ const Contact = () => {
                 htmlFor="floating_email"
                 className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#b70038] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Message
+                Insert <span className="">Letter combination</span> Here
               </label>
             </div>
             <button
               type="submit"
               className="text-white bg-[#b70038]  focus:ring-4 focus:ring-[#b70038] font-medium text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
             >
-              Send
+              Send Me Your Letter Combinations
             </button>
           </form>
         </div>
       </section>
-      <Footer></Footer>
     </>
   );
 };

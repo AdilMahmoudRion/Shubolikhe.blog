@@ -82,6 +82,7 @@ const Tags = () => {
         <div className="grid px-5 md:px-0  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tag.map((tag) => (
             <Link
+              key={tag.id}
               to={tag.url.concat(tag.title)}
               className="tags-card col-span-1"
             >
