@@ -39,6 +39,7 @@ const BlogsPage = () => {
         <div className="grid md:grid-cols-3 sm:grid-cols-1  md:gap-10">
           {tagBlog.map((blog) => (
             <Link
+              key={blog._id}
               to={`/read-blog/${blog._id}`}
               className="blog-post-card-section col-span-1"
             >

@@ -276,6 +276,7 @@ const Read = () => {
               <div className="c-tags">
                 {tag.map((data) => (
                   <Link
+                    key={data.id}
                     className="c-tags-link"
                     to={data.url.concat(data.title)}
                   >
